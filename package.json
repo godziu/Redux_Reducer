@@ -1,0 +1,22 @@
+{
+  "name": "redux_reducer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godziu/Redux_Reducer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/godziu/Redux_Reducer/issues"
+  },
+  "homepage": "https://github.com/godziu/Redux_Reducer#readme",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
+}
