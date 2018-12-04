@@ -1,20 +1,20 @@
 import uuid from "uuid";
 
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
-export const CREATE_COMMENT = 'CREATE_COMMENT';
+export const ADD_COMMENT = 'CREATE_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-function createComment(text) {
+export function addComment(text) {
     return {
-        type: CREATE_COMMENT,
+        type: ADD_COMMENT,
         text,
         id: uuid.v4()
     }
 }
 
-function editComment(text, id) {
+export function editComment(text, id) {
     return {
         type: EDIT_COMMENT,
         id,
@@ -22,25 +22,25 @@ function editComment(text, id) {
     }
 }
 
-function deleteComment(id) {
+export function deleteComment(id) {
     return {
         type: REMOVE_COMMENT,
         id
     }
 }
 
-function thumbUpComment(votes, id) {
+export function thumbUpComment(commentId) {
     return {
         type: THUMB_UP_COMMENT,
-        id,
-        votes: votes++
+        id: commentId
+        // votes: votes++
     }
 }
 
-function thumbDownComment(votes, id) {
+export function thumbDownComment(commentId) {
     return {
         type: THUMB_DOWN_COMMENT,
-        id,
-        votes: votes--
+        id: commentId
+        // votes: votes--
     }
 }
